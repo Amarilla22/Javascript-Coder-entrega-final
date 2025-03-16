@@ -4,21 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
+    <script type="text/javascript"
+    src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+    <script type="text/javascript">
+    emailjs.init('2bjEbsNOP_A7hz6gf')
+
+</script>
 </head>
 <body id="body">
 
     <main>
         <h1>Bienvenido</h1>
-        <div>
-            <p>Ingrese su nombre de usuario</p>
-            <input type="text" name="" id="nombre">
-        </div>
-        <div>
+        <form id="inicio">
+            <p>Ingrese su mail</p>
+            <input type="email" placeholder="Correo electrónico" id="mail" required>
             <p>Ingrese su clave</p>
-            <input type="text" name="" id="clave">
-        </div>
+            <input type="password" placeholder="Contraseña" id="clave" required>
+            <button id="boton">Continuar</button>
+        </form>
         <br>
-        <button id="boton">Continuar</button>
+        
     </main>
     
     
