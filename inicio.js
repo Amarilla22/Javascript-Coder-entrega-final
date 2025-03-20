@@ -1,7 +1,7 @@
 let cuentas = [ 
     {mail: "santidaniamari1@gmail.com", clave: "12345"},
     {mail: "Brisasanchez@gmail.com", clave: "54321"}
-];
+]; //cuentas registradas para comprar
 
 let usuario
 let boton = document.getElementById("boton")
@@ -10,23 +10,19 @@ let mail,clave
 
 
  boton.addEventListener('click', function(event) {
-    event.preventDefault();
+    event.preventDefault(); //evito que la pagina se recargue
     
 
     mail = document.getElementById("mail").value
     clave = document.getElementById("clave").value
     
-    console.log("hola usuario "+ mail)
-    console.log("su clave es "+ clave)
-
-
     if(usuario = cuentas.find(cuentas => cuentas.mail == mail)){
-        if(usuario.clave == clave){
+        if(usuario.clave == clave){ // si el usuario es valido inicia el proceso de enviar el mail
 
             boton.textContent = 'enviando...';
 
             enviarmail(mail)
-        setTimeout(() => {
+        setTimeout(() => { // tiempo hasta que se ejecute la api para enviar el mail
             window.location.href = "compra.html"  
         }, 4000);
             
