@@ -12,6 +12,11 @@ nueva_pagina()
 let boton = document.getElementById("finalizar")
 
 
+function crear_carrito(){//creacion del carrito
+    let contenedor_carrito = document.getElementById("carrito")
+    
+}
+
 function nueva_pagina(){ //creacion de la nueva pagina con todos sus elementos e ids
     let listado = document.getElementById("contenedor")
 
@@ -85,6 +90,7 @@ boton.addEventListener("click", () => {
     nuevo_prod = productos
     localStorage.setItem("productos",JSON.stringify(nuevo_prod)) //guardo la nueva cantidad de productos 
     location.reload() //recargo la pagina para mostrar correctamente los productos
+
 
 })
 
